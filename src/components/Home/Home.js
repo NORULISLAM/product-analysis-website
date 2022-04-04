@@ -1,6 +1,7 @@
 import React from 'react';
-import useReview from '../../hooks/useReview'
-import Review from '../Review/Review';
+import useReview from '../../hooks/useReview';
+import Review from '../Review/Review'
+
 const Home = () => {
     const [Review, setReview] = useReview();
     console.log(Review);
@@ -23,9 +24,28 @@ const Home = () => {
             </div>
             <div>
                 <h1 className="text-center">Customer Reviews(3)</h1>
-                <div className='review-container'>
+                {/* {
+                    Review.map(review => <div>
+                        <h3>{review.name}</h3>
+                        <img src={review.img} alt="" />
+                    </div>)
+                } */}
+                <Review
+                    key={Review.id}
+                    Review={Review}
+                ></Review>
 
-                </div>
+                {
+                    Review.slice(0, 3).map(review =>
+
+                        <div className="card-body">
+                            <img src={review.img} alt="" />
+                            <h5 className="card-title">Card title{review.name}</h5>
+
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>)
+                }
+
                 <div className="d-grid gap-2 col-6 mx-auto">
                     <button className="btn btn-primary" type="button">See All Reviews</button>
                 </div>
