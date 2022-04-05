@@ -12,19 +12,20 @@ const Dashboard = () => {
     // return [phones,setPhones];
     return (
         <div>
+            <h2 className='text-info fw-bold'>Investment vs Revenue</h2>
             <PieChart width={800} height={600}>
                 <Pie data={phones} dataKey="investment" cx="50%" cy="50%" outerRadius={90} fill="#8884d8" />
                 <Pie data={phones} dataKey="investment" cx="50%" cy="50%" innerRadius={90} outerRadius={100} fill="#82ca9d" label />
                 <Tooltip></Tooltip>
             </PieChart>
-
+            <h2 className='text-info fw-bold'>Investment Wise month sell </h2>
             <BarChart width={600} height={400} data={phones}>
                 <Bar dataKey="investment" fill="#8884d8" />
                 <XAxis datakey="month"></XAxis>
                 <Tooltip></Tooltip>
                 <YAxis></YAxis>
             </BarChart>
-
+            <h2 className='text-info fw-bold'>Monthly revenue</h2>
             <LineChart width={400} height={500} data={phones}>
                 <Line dataKey="sell"></Line>
                 <Line dataKey="revenue"></Line>

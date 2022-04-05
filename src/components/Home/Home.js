@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useReview from '../../hooks/useReview';
 
 const Home = () => {
     const [Review, setReview] = useReview();
-    console.log(Review);
+
+    const navigate = useNavigate();
+
+    const showDetails = () => {
+        navigate('/reviews');
+    }
     return (
         <div>
 
@@ -35,17 +41,17 @@ const Home = () => {
                 {
                     Review.slice(0, 3).map(review =>
 
-                        <div className="card-body">
-                            <img src={review.img} alt="" />
+                        <div className="card-body text-center">
+                            <img src={review.img} className="img-thumbnail rounded" alt="" />
                             <h5 className="card-title">Card title{review.name}</h5>
 
-                            <p className="card-text">{review.comment}</p>
+                            <p className="card-text"> Comment: {review.comment}</p>
                             <h5>Rating: {review.ratings}</h5>
                         </div>)
                 }
 
                 <div className="d-grid gap-2 col-6 mx-auto">
-                    <button className="btn btn-primary" type="button">See All Reviews</button>
+                    <button onClick={showDetails} className="btn btn-primary" type="button">See All Reviews</button>
                 </div>
 
             </div>
