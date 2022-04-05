@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# MacBook strore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with (https://stately-axolotl-fb7c01.netlify.app/).
 
 ## Available Scripts
 
