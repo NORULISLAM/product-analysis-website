@@ -1,6 +1,13 @@
 # MacBook strore
 
-This project was bootstrapped with (https://stately-axolotl-fb7c01.netlify.app/).
+This project was bootstrapped with live link (https://stately-axolotl-fb7c01.netlify.app/).
+
+*Dashbroad(3 chart avaiable)
+*home (flowing the navbar all details show you.)
+*reviews (reviews details 6 person user)
+*blogs (answer the quation)
+
+
 
 ## Available Scripts
 
